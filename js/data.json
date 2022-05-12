@@ -1,0 +1,32 @@
+[
+  {
+    "vendedor":"Antonio",
+    "numerodevendas":245,
+    "valortotal":25482.00  
+  },
+  {
+    "vendedor":"Francisco",
+    "numerodevendas":242,
+    "valortotal": 26521.00
+  },
+  {
+    "vendedor":"João",
+    "numerodevendas":326,
+    "valortotal": 34003.52 
+  },
+  {
+    "vendedor":"Maria",
+    "numerodevendas":200,
+    "valortotal":18933.00 
+  },
+  {
+    "vendedor":"Neide",
+    "numerodevendas":480,
+    "valortotal":52478.63  
+  },
+  {
+    "vendedor":"Oliver",
+    "numerodevendas":102,
+    "valortotal":15230.98  
+  }
+]

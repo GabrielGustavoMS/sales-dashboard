@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <main></main>
+    <script>
+      async function getContent() {
+        try {
+          const response = await fetch('./js/data.json')
+          const data = await response.json()
+          console.log(data)
+          show(data)
+        } catch (error) {
+          console.error(error)
+        }
+      }
+      getContent()
+
+      function show(sales) {}
+
+      function showRawData(sales) {
+        let output = ''
+        for (let sale of sales) {
+          output += `<li>Nome: ${sale.vendedor} |Nº de Vendas ${
+            sale.numerodevendas
+          }
+            | Total de vendas ${formatLocalCurrencyBRL(
+              sale.valortotal
+            )}| Comissão: ${formatLocalCurrencyBRL(
+            calculateCommission(sale.valortotal)
+          )}| Ticket Médio: ${formatLocalCurrencyBRL(
+            calculateAverageTicket(sale.valortotal, sale.numerodevendas)
+          )}</li>`
+        }
+        document.querySelector('main').innerHTML = output
+      }
+
+      function formatLocalCurrencyBRL(currencyValue) {
+        const formattedCurrency = currencyValue.toLocaleString('pt-BR', {
+          style: 'currency',
+          currency: 'BRL'
+        })
+        return formattedCurrency
+      }
+
+      function calculateCommission(totalSalesValue) {
+        const commission =
+          totalSalesValue <= 20000
+            ? totalSalesValue * 0.03
+            : totalSalesValue * 0.05
+        return commission
+      }
+
+      function calculateAverageTicket(totalSalesValue, numberOfSales) {
+        const averageTicket = totalSalesValue / numberOfSales
+        return averageTicket
+      }
+    </script>
+  </body>
+</html>
