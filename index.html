@@ -5,61 +5,259 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: rgb(26, 26, 26);
+      }
+    </style>
   </head>
-  <body>
+  <body class="text-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3" id="totalRecipe">
+          Receita Total: R$ 1000.000,00
+        </div>
+        <div class="col-md-3" id="totalAmountOfSales">
+          Nº Total de Vendas: 31.300
+        </div>
+        <div class="col-md-3" id="teamAverageTicket">
+          Ticket Médio da Equipe: R$ 2405,00
+        </div>
+        <div class="col-md-3" id="totalCommisionValue">
+          Valor Total de Comissão: R$ 2405,00
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <canvas id="myChart"></canvas>
+        </div>
+        <div class="col-md-6">
+          <canvas id="myChart2"></canvas>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-md-6">
+          <canvas id="myChart3"></canvas>
+        </div>
+        <div class="col-md-6">
+          <canvas id="myChart5"></canvas>
+        </div>
+      </div>
+    </div>
     <main></main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-      async function getContent() {
-        try {
-          const response = await fetch('./js/data.json')
-          const data = await response.json()
-          console.log(data)
-          show(data)
-        } catch (error) {
-          console.error(error)
-        }
-      }
-      getContent()
+      const config = {
+        type: 'bar',
+        data: {
+          datasets: [
+            {
+              label: 'Valor Total de Vendas em R$',
+              backgroundColor: '#7552cc',
+              data: [
+                {
+                  id: 'Neide',
+                  nested: { value: 52478.63 }
+                },
 
-      function show(sales) {}
-
-      function showRawData(sales) {
-        let output = ''
-        for (let sale of sales) {
-          output += `<li>Nome: ${sale.vendedor} |Nº de Vendas ${
-            sale.numerodevendas
+                {
+                  id: 'João',
+                  nested: { value: 34003.52 }
+                },
+                {
+                  id: 'Francisco',
+                  nested: { value: 26521.0 }
+                },
+                {
+                  id: 'Antonio',
+                  nested: { value: 25482.0 }
+                },
+                {
+                  id: 'Maria',
+                  nested: { value: 18933.0 }
+                },
+                {
+                  id: 'Oliver',
+                  nested: { value: 15230.98 }
+                }
+              ]
+            }
+          ]
+        },
+        options: {
+          parsing: {
+            xAxisKey: 'id',
+            yAxisKey: 'nested.value'
           }
-            | Total de vendas ${formatLocalCurrencyBRL(
-              sale.valortotal
-            )}| Comissão: ${formatLocalCurrencyBRL(
-            calculateCommission(sale.valortotal)
-          )}| Ticket Médio: ${formatLocalCurrencyBRL(
-            calculateAverageTicket(sale.valortotal, sale.numerodevendas)
-          )}</li>`
         }
-        document.querySelector('main').innerHTML = output
       }
 
-      function formatLocalCurrencyBRL(currencyValue) {
-        const formattedCurrency = currencyValue.toLocaleString('pt-BR', {
-          style: 'currency',
-          currency: 'BRL'
-        })
-        return formattedCurrency
+      const config2 = {
+        type: 'bar',
+        data: {
+          datasets: [
+            {
+              label: 'Numero de Vendas',
+              backgroundColor: '#0abf53',
+              data: [
+                {
+                  id: 'Antonio',
+                  nested: { value: 245 }
+                },
+                {
+                  id: 'Francisco',
+                  nested: { value: 242 }
+                },
+                {
+                  id: 'João',
+                  nested: { value: 326 }
+                },
+                {
+                  id: 'Maria',
+                  nested: { value: 200 }
+                },
+                {
+                  id: 'Neide',
+                  nested: { value: 480 }
+                },
+                {
+                  id: 'Oliver',
+                  nested: { value: 102 }
+                }
+              ]
+            }
+          ]
+        },
+        options: {
+          parsing: {
+            xAxisKey: 'id',
+            yAxisKey: 'nested.value'
+          }
+        }
+      }
+      /*
+      const config3 = {
+        type: 'doughnut',
+        data: {
+          labels: ['Red', 'Blue'],
+          datasets: [
+            {
+              label: 'My First Dataset',
+              data: [70, 30],
+              backgroundColor: ['#ffc845', '#037ef3'],
+              hoverOffset: 2
+            }
+          ]
+        }
+      }
+*/
+      const config4 = {
+        type: 'bar',
+        data: {
+          datasets: [
+            {
+              label: 'Ticket Médio',
+              backgroundColor: '#da1884',
+
+              data: [
+                {
+                  id: 'Antonio',
+                  nested: { value: 245 }
+                },
+                {
+                  id: 'Francisco',
+                  nested: { value: 242 }
+                },
+                {
+                  id: 'João',
+                  nested: { value: 326 }
+                },
+                {
+                  id: 'Maria',
+                  nested: { value: 200 }
+                },
+                {
+                  id: 'Neide',
+                  nested: { value: 480 }
+                },
+                {
+                  id: 'Oliver',
+                  nested: { value: 102 }
+                }
+              ]
+            }
+          ]
+        },
+        options: {
+          parsing: {
+            xAxisKey: 'id',
+            yAxisKey: 'nested.value'
+          }
+        }
       }
 
-      function calculateCommission(totalSalesValue) {
-        const commission =
-          totalSalesValue <= 20000
-            ? totalSalesValue * 0.03
-            : totalSalesValue * 0.05
-        return commission
-      }
+      const config3 = {
+        type: 'bar',
+        data: {
+          datasets: [
+            {
+              label: 'Comissões',
+              backgroundColor: '#0cb9c1',
 
-      function calculateAverageTicket(totalSalesValue, numberOfSales) {
-        const averageTicket = totalSalesValue / numberOfSales
-        return averageTicket
+              data: []
+            }
+          ]
+        },
+        options: {}
       }
+      const config5 = {
+        type: 'bar',
+        data: {
+          datasets: [
+            {
+              label: '',
+              backgroundColor: '#da1884',
+
+              data: []
+            }
+          ]
+        },
+        options: {}
+      }
+      Chart.defaults.color = '#ffffff'
+      Chart.defaults.borderColor = '#ffffff'
     </script>
+
+    <script>
+      var myChart = new Chart(document.getElementById('myChart'), config)
+      const myChart2 = new Chart(document.getElementById('myChart2'), config2)
+      const myChart3 = new Chart(document.getElementById('myChart3'), config3)
+      // const myChart4 = new Chart(document.getElementById('myChart4'), config4)
+      var myChart5 = new Chart(document.getElementById('myChart5'), config5)
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
