@@ -1,51 +1,45 @@
-async function getContent() {
+async function getDashboard() {
   try {
-    const response = await fetch('./js/data.json')
+    const response = await fetch('./../js/data.json')
     const data = await response.json()
     show(data)
   } catch (error) {
     console.error(error)
   }
 }
-getContent()
 
 function show(sales) {
-  const [vrNames, vrRevenues] = getRevenueChartContent(sales, 'asc')
+  const [vrNames, vrRevenues] = getRevenueChartContent(sales, 'desc')
 
-  updateGraph(myChart, 'Valor Total de Vendas', vrNames, vrRevenues)
+  updateGraph(myChart, 'Total de Vendas em R$', vrNames, vrRevenues)
 
   const [vnNames, vnAmoutOfSales] = getAmountOfSalesChartContent(sales, 'desc')
-
   updateGraph(myChart2, 'Número de Vendas', vnNames, vnAmoutOfSales)
-
-  const [vaNames, vaAverageTickets] = getAverageTicketChartContent(sales, 'asc')
-  updateGraph(myChart5, 'Ticket Médio em R$', vaNames, vaAverageTickets)
 
   const [vcNames, vcComissions] = getCommissionChartContent(sales, 'desc')
   updateGraph(myChart3, 'Comissões em R$', vcNames, vcComissions)
+
+  const [vaNames, vaAverageTickets] = getAverageTicketChartContent(
+    sales,
+    'desc'
+  )
+  updateGraph(myChart4, 'Ticket Médio em R$', vaNames, vaAverageTickets)
 
   // General Info
   const totalRevenue = calculateTotalRevenue(sales)
   const totalAmountOfSales = calculateTotalAmountOfSales(sales)
   const totalComissionValue = calculateTotalComissionValue(sales)
-  $('#totalRecipe').innerText = `Receita Total: ${formatLocalCurrencyBRL(
-    totalRevenue
-  )}`
+  $('#totalRevenue').innerHTML = ` ${formatLocalCurrencyBRL(totalRevenue)}`
 
-  $(
-    `#totalAmountOfSales`
-  ).innerText = `Quantidate Total de Vendas: ${totalAmountOfSales}`
+  $(`#totalAmountOfSales`).innerHTML = `${totalAmountOfSales}`
 
-  $('#teamAverageTicket').innerHTML = `
-  Ticket Médio da Equipe
+  $('#teamAverageTicket').innerHTML = `  
     ${formatLocalCurrencyBRL(
       calculateTeamAverageTicket(totalRevenue, totalAmountOfSales)
     )}
     `
 
-  $(
-    '#totalCommisionValue'
-  ).innerHTML = `Valor Total de Comissão: ${formatLocalCurrencyBRL(
+  $('#totalCommisionValue').innerHTML = `${formatLocalCurrencyBRL(
     totalComissionValue
   )}`
 }
@@ -64,7 +58,7 @@ function getRevenueChartContent(sales, sort) {
 
 function getAmountOfSalesChartContent(sales, sort) {
   const vendorNames = sales.map(function (sale) {
-    return sale.vendedor, sale.numerodevendas
+    return sale.vendedor, sale.vendedor
   })
 
   const amountOfSales = sales.map(function (sale) {
@@ -229,4 +223,89 @@ function showRawData(sales) {
     )}</li>`
   }
   $('main').innerHTML = output
+}
+
+async function getTables() {
+  try {
+    const response = await fetch('./../js/data.json')
+    const data = await response.json()
+    showTableWithMissingContent(data)
+    showTableWithFullContent(data)
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+function showTableWithMissingContent(sales) {
+  $('#missing-table-content').innerHTML = getTableWithMissingContent(sales)
+}
+
+function showTableWithFullContent(sales) {
+  $('#full-table-content').innerHTML = getTableWithFullContent(sales)
+}
+
+function getTableWithFullContent(sales) {
+  let i = 1
+  let output = `<table class="table table-dark table-striped text-center">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Vendedor</th>
+      <th scope="col">Valor Total</th>
+      <th scope="col">Número de Vendas</th>
+      <th scope="col">Ticket Médio</th>
+      <th scope="col">Comissão</th>
+    </tr>
+  </thead>
+  <tbody>`
+  for (let sale of sales) {
+    output += ` 
+    <tr>
+    <th scope="row">${i}</th>
+    <td>${sale.vendedor}</td>
+    <td>${formatLocalCurrencyBRL(sale.valortotal)}</td>
+    <td>${sale.numerodevendas}</td>
+    <td>${formatLocalCurrencyBRL(
+      calculateAverageTicket(sale.valortotal, sale.numerodevendas)
+    )}</td>
+    <td>${formatLocalCurrencyBRL(calculateCommission(sale.valortotal))}</td>
+  </tr>`
+    i++
+  }
+  output += `
+  </tbody>
+  </table>`
+  return output
+}
+
+function getTableWithMissingContent(sales) {
+  let i = 1
+  let output = `<table class="table table-dark table-striped text-center">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Vendedor</th>
+      <th scope="col">Valor Total</th>
+      <th scope="col">Número de Vendas</th>
+      <th scope="col">Ticket Médio</th>
+      <th scope="col">Comissão</th>
+    </tr>
+  </thead>
+  <tbody>`
+  for (let sale of sales) {
+    output += ` 
+    <tr>
+    <th scope="row">${i}</th>
+    <td>${sale.vendedor}</td>
+    <td>${formatLocalCurrencyBRL(sale.valortotal)}</td>
+    <td>${sale.numerodevendas}</td>
+    <td>X</td>
+    <td>X</td>
+  </tr>`
+    i++
+  }
+  output += `
+  </tbody>
+  </table>`
+  return output
 }

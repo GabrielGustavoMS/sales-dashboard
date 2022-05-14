@@ -4,244 +4,173 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <meta name="description" content="Free Web tutorials" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Dashboard" />
+    <meta name="author" content="Dashboard de Vendas" />
+    <title>Document</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="../assets/fontawesome-free-6.1.1-web/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/fontawesome-free-6.1.1-web/css/all.css"
+    />
     <style>
       body {
         background-color: rgb(26, 26, 26);
+        color: white;
       }
+      a {
+        font-size: 2rem;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+      @media (max-width: 750px) {
+        .p-5 {
+          padding: 2% !important;
+        }
+      }
+      canvas:first-child {
+        min-height: 500px;
+      }
+      /* @media (max-width: 500px) {
+        canvas {
+          visibility: hidden;
+          display: none;
+        }
+      } */
     </style>
   </head>
-  <body class="text-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3" id="totalRecipe">
-          Receita Total: R$ 1000.000,00
-        </div>
-        <div class="col-md-3" id="totalAmountOfSales">
-          Nº Total de Vendas: 31.300
-        </div>
-        <div class="col-md-3" id="teamAverageTicket">
-          Ticket Médio da Equipe: R$ 2405,00
-        </div>
-        <div class="col-md-3" id="totalCommisionValue">
-          Valor Total de Comissão: R$ 2405,00
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <canvas id="myChart"></canvas>
-        </div>
-        <div class="col-md-6">
-          <canvas id="myChart2"></canvas>
-        </div>
-      </div>
-      <br />
-      <div class="row">
-        <div class="col-md-6">
-          <canvas id="myChart3"></canvas>
-        </div>
-        <div class="col-md-6">
-          <canvas id="myChart5"></canvas>
-        </div>
-      </div>
-    </div>
-    <main></main>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-      const config = {
-        type: 'bar',
-        data: {
-          datasets: [
-            {
-              label: 'Valor Total de Vendas em R$',
-              backgroundColor: '#7552cc',
-              data: [
-                {
-                  id: 'Neide',
-                  nested: { value: 52478.63 }
-                },
+  <body>
+    <section class="container">
+      <section class="row">
+        <article class="col-md-12">
+          <section class="p-3 bg-dark rounded mt-5">
+            <h2 class="text-light">
+              <i class="fa-solid fa-sack-dollar"></i>
+              Receita
+            </h2>
+          </section>
+        </article>
+      </section>
+    </section>
+    <section class="container mb-5">
+      <section class="row">
+        <article class="col-lg-9">
+          <article class="p-5 bg-dark rounded mt-3">
+            <canvas id="myChart"></canvas>
+          </article>
+        </article>
+        <article class="col-lg-3">
+          <section class="p-5 bg-dark text-center rounded mt-3">
+            <h5 class="mb-5">
+              Receita Total &nbsp; <i class="fa-solid fa-coins"></i>
+            </h5>
+            <h5 id="totalRevenue"></h5>
+          </section>
+        </article>
+      </section>
+    </section>
 
-                {
-                  id: 'João',
-                  nested: { value: 34003.52 }
-                },
-                {
-                  id: 'Francisco',
-                  nested: { value: 26521.0 }
-                },
-                {
-                  id: 'Antonio',
-                  nested: { value: 25482.0 }
-                },
-                {
-                  id: 'Maria',
-                  nested: { value: 18933.0 }
-                },
-                {
-                  id: 'Oliver',
-                  nested: { value: 15230.98 }
-                }
-              ]
-            }
-          ]
-        },
-        options: {
-          parsing: {
-            xAxisKey: 'id',
-            yAxisKey: 'nested.value'
-          }
-        }
-      }
+    <section class="container mt-3">
+      <section class="row">
+        <article class="col-md-12">
+          <section class="p-3 bg-dark rounded mt-5">
+            <h2 class="text-light">
+              <i class="fa-solid fa-chart-simple"></i>
+              Quantitade de Vendas
+            </h2>
+          </section>
+        </article>
+      </section>
+    </section>
 
-      const config2 = {
-        type: 'bar',
-        data: {
-          datasets: [
-            {
-              label: 'Numero de Vendas',
-              backgroundColor: '#0abf53',
-              data: [
-                {
-                  id: 'Antonio',
-                  nested: { value: 245 }
-                },
-                {
-                  id: 'Francisco',
-                  nested: { value: 242 }
-                },
-                {
-                  id: 'João',
-                  nested: { value: 326 }
-                },
-                {
-                  id: 'Maria',
-                  nested: { value: 200 }
-                },
-                {
-                  id: 'Neide',
-                  nested: { value: 480 }
-                },
-                {
-                  id: 'Oliver',
-                  nested: { value: 102 }
-                }
-              ]
-            }
-          ]
-        },
-        options: {
-          parsing: {
-            xAxisKey: 'id',
-            yAxisKey: 'nested.value'
-          }
-        }
-      }
-      /*
-      const config3 = {
-        type: 'doughnut',
-        data: {
-          labels: ['Red', 'Blue'],
-          datasets: [
-            {
-              label: 'My First Dataset',
-              data: [70, 30],
-              backgroundColor: ['#ffc845', '#037ef3'],
-              hoverOffset: 2
-            }
-          ]
-        }
-      }
-*/
-      const config4 = {
-        type: 'bar',
-        data: {
-          datasets: [
-            {
-              label: 'Ticket Médio',
-              backgroundColor: '#da1884',
+    <section class="container mb-5">
+      <section class="row">
+        <article class="col-lg-9">
+          <article class="p-3 bg-dark rounded mt-3">
+            <canvas id="myChart2"></canvas>
+          </article>
+        </article>
+        <article class="col-lg-3">
+          <section class="p-5 bg-dark text-center rounded mt-3">
+            <h5 class="mb-5">
+              Total &nbsp; <i class="fa-solid fa-chart-column"></i>
+            </h5>
+            <h5 id="totalAmountOfSales"></h5>
+          </section>
+        </article>
+      </section>
+    </section>
 
-              data: [
-                {
-                  id: 'Antonio',
-                  nested: { value: 245 }
-                },
-                {
-                  id: 'Francisco',
-                  nested: { value: 242 }
-                },
-                {
-                  id: 'João',
-                  nested: { value: 326 }
-                },
-                {
-                  id: 'Maria',
-                  nested: { value: 200 }
-                },
-                {
-                  id: 'Neide',
-                  nested: { value: 480 }
-                },
-                {
-                  id: 'Oliver',
-                  nested: { value: 102 }
-                }
-              ]
-            }
-          ]
-        },
-        options: {
-          parsing: {
-            xAxisKey: 'id',
-            yAxisKey: 'nested.value'
-          }
-        }
-      }
+    <section class="container">
+      <section class="row">
+        <article class="col-md-12">
+          <section class="p-3 bg-dark rounded mt-5">
+            <h2 class="text-light">
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+              Comissão
+            </h2>
+          </section>
+        </article>
+      </section>
+    </section>
 
-      const config3 = {
-        type: 'bar',
-        data: {
-          datasets: [
-            {
-              label: 'Comissões',
-              backgroundColor: '#0cb9c1',
+    <section class="container mb-5">
+      <section class="row">
+        <article class="col-lg-9">
+          <article class="p-5 bg-dark rounded mt-3">
+            <canvas id="myChart3"></canvas>
+          </article>
+        </article>
+        <article class="col-lg-3">
+          <section class="p-5 bg-dark text-center rounded mt-3">
+            <h5 class="mb-5">
+              Comissão Total &nbsp; <i class="fa-solid fa-coins"></i>
+            </h5>
+            <h5 id="totalCommisionValue"></h5>
+          </section>
+        </article>
+      </section>
+    </section>
 
-              data: []
-            }
-          ]
-        },
-        options: {}
-      }
-      const config5 = {
-        type: 'bar',
-        data: {
-          datasets: [
-            {
-              label: '',
-              backgroundColor: '#da1884',
-
-              data: []
-            }
-          ]
-        },
-        options: {}
-      }
-      Chart.defaults.color = '#ffffff'
-      Chart.defaults.borderColor = '#ffffff'
-    </script>
-
-    <script>
-      var myChart = new Chart(document.getElementById('myChart'), config)
-      const myChart2 = new Chart(document.getElementById('myChart2'), config2)
-      const myChart3 = new Chart(document.getElementById('myChart3'), config3)
-      // const myChart4 = new Chart(document.getElementById('myChart4'), config4)
-      var myChart5 = new Chart(document.getElementById('myChart5'), config5)
-    </script>
+    <section class="container">
+      <section class="row">
+        <article class="col-md-12">
+          <section class="p-3 bg-dark rounded mt-5">
+            <h2 class="text-light">
+              <i class="fa-solid fa-ticket-simple"></i>
+              Ticket Médio
+            </h2>
+          </section>
+        </article>
+      </section>
+    </section>
+    <section class="container mb-5">
+      <section class="row">
+        <article class="col-lg-9">
+          <article class="p-5 bg-dark rounded mt-3">
+            <canvas id="myChart4"></canvas>
+          </article>
+        </article>
+        <article class="col-lg-3">
+          <section class="p-5 bg-dark text-center rounded mt-3">
+            <h5 class="mb-5">
+              Ticket Médio da Equipe &nbsp; <i class="fa-solid fa-coins"></i>
+            </h5>
+            <h5 id="teamAverageTicket"></h5>
+          </section>
+        </article>
+      </section>
+    </section>
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -258,6 +187,12 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/main.js"></script>
+
+    <script src="./../js/charts.js"></script>
+    <script src="./../js/myChartsConfig.js"></script>
+    <script src="./../js/main.js"></script>
+    <script>
+      getDashboard()
+    </script>
   </body>
 </html>
