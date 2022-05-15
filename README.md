@@ -64,9 +64,17 @@ O dashboard de vendas foi desenvolvido utilizando as linguagens HTML, CSS e Java
 
 ## Principais funções
 
-### Cálculo de Comissão
+### Cálculo da Comissão
 
 ![](./img/funcao-calculate-comission.jpg)
+
+### Cálculo todas as comissões
+
+![](./img/funcao-calculate-all-comissions.jpg)
+
+### Cálculo de todos os tickets médio
+
+![](./img/funcao-calculate-all-average-tickets.jpg)
 
 ### Cálculo do Ticket Médio
 
@@ -76,7 +84,7 @@ O dashboard de vendas foi desenvolvido utilizando as linguagens HTML, CSS e Java
 
 Obteve-se como resultado um Dashboard de vendas que consome e apresenta os dados fornecidos e os solicitados, de forma gráfica.
 
-## Referência
+## Referências
 
 - Hayward, E. [What is a data dashboard?](https://www.klipfolio.com/blog/what-is-a-data-dashboard)Acesso em: 14 de maio 2022.
 - [The importance of dashboards](https://clarivate.com/blog/the-importance-of-dashboards/#:~:text=These%20dashboards%20provide%20critical%20reporting,better%20navigating%20the%20surrounding%20landscape.) Acesso em: 15 de maio 2022.
