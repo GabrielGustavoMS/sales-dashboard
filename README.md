@@ -62,35 +62,58 @@ Uma tabela é composta somente pelos dados fornecidos e a outra, com os valores 
 
 O dashboard de vendas foi desenvolvido utilizando as linguagens HTML, CSS e Javascript, em conjunto com Bootstrap e Chart JS (para criar e apresentar os gráficos).
 
-## Principais funções
+## Descrevendo algumas das principais funções
 
 ### Cálculo da Comissão
 
 ![](./img/funcao-calculate-comission.jpg)
 
+**Retorno:** valor da comissão de cada vendedor
+
 ### Cálculo do Ticket Médio
 
 ![](./img/funcao-calculate-average-ticket.jpg)
+
+**Retorno:** valor do ticket médio de cada vendedor
 
 ### Cálculo todas as comissões
 
 ![](./img/funcao-calculate-all-comissions.jpg)
 
+**Retorno:** vetor com as comissões de todos os vendedores
+
 ### Cálculo de todos os tickets médio
 
 ![](./img/funcao-calculate-all-average-tickets.jpg)
 
-### Cálculo do número total de vendas
-
-![]()
+**Retorno:** vetor com os tickets médio de todos os vendedores
 
 ### Obter o conteúdo do gráfico de comissões
 
 ![](./img/funcao-get-comission-chart-content.jpg)
 
+**Retorno:** 2 arrays. O primeiro com o nome dos vendedores e o segundo com suas respectivas comissões
+
 ### Obter o conteúdo do gráfico de receita
 
 ![](./img/funcao-get-revenue-chart-content.jpg)
+
+**Retorno:** 2 arrays. O primeiro com o nome dos vendedores e o segundo com suas respectivas receitas
+
+### Atualizar Gráfico
+
+![](./img/funcao-update-graph.jpg)
+
+Essa função receberá como parâmetros:
+
+- um array com os nomes dos vendedores, eixo X.
+- um array com valores de um dos 4 atributos (comissão, ticket médio, valor total de vendas e o numero de vendas)
+
+_Ela é a principal conexão com a livraria de gráficos_
+
+### Gerar Tabela Completa de dados
+
+![](./img/funcao-getTableWithFullContent.jpg)
 
 ## Resultados
 
