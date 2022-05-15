@@ -1,6 +1,6 @@
 async function getDashboard() {
   try {
-    const response = await fetch('./../js/data.json')
+    const response = await fetch('./js/data.json')
     const data = await response.json()
     show(data)
   } catch (error) {
@@ -210,24 +210,9 @@ function $(selector) {
   return document.querySelector(selector)
 }
 
-function showRawData(sales) {
-  let output = ''
-  for (let sale of sales) {
-    output += `<li>Nome: ${sale.vendedor} |Nº de Vendas ${sale.numerodevendas}
-      | Total de vendas ${formatLocalCurrencyBRL(
-        sale.valortotal
-      )}| Comissão: ${formatLocalCurrencyBRL(
-      calculateCommission(sale.valortotal)
-    )}| Ticket Médio: ${formatLocalCurrencyBRL(
-      calculateAverageTicket(sale.valortotal, sale.numerodevendas)
-    )}</li>`
-  }
-  $('main').innerHTML = output
-}
-
 async function getTables() {
   try {
-    const response = await fetch('./../js/data.json')
+    const response = await fetch('./js/data.json')
     const data = await response.json()
     showTableWithMissingContent(data)
     showTableWithFullContent(data)
