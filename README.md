@@ -66,7 +66,8 @@ O dashboard de vendas foi desenvolvido utilizando:
 - CSS
 - Javascript
 - Bootstrap
-- Chart JS (para criar e apresentar os gráficos).
+- Chart JS (para criar e apresentar os gráficos)
+- Fontawesome (Ícones)
 
 ## Descrevendo algumas das principais funções
 
