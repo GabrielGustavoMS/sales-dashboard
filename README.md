@@ -66,6 +66,12 @@ O dashboard de vendas foi desenvolvido utilizando as linguagens HTML, CSS e Java
 
 ### Cálculo de Comissão
 
+![](./img/funcao-calculate-comission.jpg)
+
+### Cálculo do Ticket Médio
+
+![](./img/funcao-calculate-average-ticket.jpg)
+
 ## Resultados
 
 Obteve-se como resultado um Dashboard de vendas que consome e apresenta os dados fornecidos e os solicitados, de forma gráfica.
