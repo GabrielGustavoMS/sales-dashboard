@@ -72,12 +72,12 @@ Obteve-se como resultado um Dashboard de vendas que consome e apresenta os dados
 
 ## Referência
 
-- Hayward, E. What is a data dashboard? 2021. Disponível em: <https://www.klipfolio.com/blog/what-is-a-data-dashboard>Acesso em: 14 de maio 2022.
-- The importance of dashboards. 2017. Disponível em: <https://clarivate.com/blog/the-importance-of-dashboards/#:~:text=These%20dashboards%20provide%20critical%20reporting,better%20navigating%20the%20surrounding%20landscape.> Acesso em: 15 de maio 2022.
-- Dados são o novo petróleo e sua empresa deveria estar preocupada com isso. 2021. Disponível em: <https://sevenit.com.br/dados-novo-petroleo/#:~:text=E%20isso%20somente%20se%20torna,buzzword%20a%20partir%20de%20ent%C3%A3o.> Acesso em 15 de maio 2022.
-- Muller, J. Dashboard de Vendas: O que é e como montar com perfeição. 2021. Disponível em: < https://leads2b.com/blog/dashboard-de-vendas/ > Acesso em 15 de maio 2022.
-- What is a KPI?. Disponível em: < https://www.klipfolio.com/resources/articles/what-is-a-key-performance-indicator>. Acesso em 15 de maio 2021
-- Silva, D. 2021. Entenda a diferença entre métrica e KPI e saiba como usá-los para melhorar os resultados da sua empresa. Disponível em <https://www.zendesk.com.br/blog/diferenca-entre-metrica-e-kpi/#:~:text=As%20m%C3%A9tricas%20permitem%20mensurar%2C%20monitorar,de%20forma%20num%C3%A9rica%20ou%20percentual.> Acesso em 15 de maio 2021
-- What are data points. Disponível em: <https://www.buschsystems.com/resource-center/knowledgeBase/glossary/what-are-data-points> Acesso em 15 de maio 2021
-- PAULILLO, J. O que é ticket médio e como entender isso vai melhorar suas vendas. 2021. Disponível em: < https://www.agendor.com.br/blog/o-que-e-ticket-medio/> Acesso em 15 de maio 2022.
-- Nediger, M. Como escolher os melhores tipos de gráficos para os seus dados. 2021. Disponível em: < https://pt.venngage.com/blog/tipos-de-graficos/> Acesso em 15 de maio 2022.
+- Hayward, E. [What is a data dashboard?](https://www.klipfolio.com/blog/what-is-a-data-dashboard)Acesso em: 14 de maio 2022.
+- [The importance of dashboards](https://clarivate.com/blog/the-importance-of-dashboards/#:~:text=These%20dashboards%20provide%20critical%20reporting,better%20navigating%20the%20surrounding%20landscape.) Acesso em: 15 de maio 2022.
+- [Dados são o novo petróleo e sua empresa deveria estar preocupada com isso.](https://sevenit.com.br/dados-novo-petroleo/#:~:text=E%20isso%20somente%20se%20torna,buzzword%20a%20partir%20de%20ent%C3%A3o.) Acesso em 15 de maio 2022.
+- Muller, J. [Dashboard de Vendas: O que é e como montar com perfeição.](https://leads2b.com/blog/dashboard-de-vendas/) Acesso em 15 de maio 2022.
+- [What is a KPI?](https://www.klipfolio.com/resources/articles/what-is-a-key-performance-indicator). Acesso em 15 de maio 2021
+- Silva, D. 2021. [Entenda a diferença entre métrica e KPI e saiba como usá-los para melhorar os resultados da sua empresa.](https://www.zendesk.com.br/blog/diferenca-entre-metrica-e-kpi/#:~:text=As%20m%C3%A9tricas%20permitem%20mensurar%2C%20monitorar,de%20forma%20num%C3%A9rica%20ou%20percentual.) Acesso em 15 de maio 2021
+- [What are data points](https://www.buschsystems.com/resource-center/knowledgeBase/glossary/what-are-data-points) Acesso em 15 de maio 2021
+- PAULILLO, J. [O que é ticket médio e como entender isso vai melhorar suas vendas.](https://www.agendor.com.br/blog/o-que-e-ticket-medio/) Acesso em 15 de maio 2022.
+- Nediger, M. [Como escolher os melhores tipos de gráficos para os seus dados.](https://pt.venngage.com/blog/tipos-de-graficos/) Acesso em 15 de maio 2022.
