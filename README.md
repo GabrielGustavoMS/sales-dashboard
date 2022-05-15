@@ -80,6 +80,10 @@ O dashboard de vendas foi desenvolvido utilizando as linguagens HTML, CSS e Java
 
 ![](./img/funcao-calculate-all-average-tickets.jpg)
 
+### Obter o conteúdo do gráfico de comissões
+
+![](./img/funcao-get-comission-chart-content.jpg)
+
 ## Resultados
 
 Obteve-se como resultado um Dashboard de vendas que consome e apresenta os dados fornecidos e os solicitados, de forma gráfica.
