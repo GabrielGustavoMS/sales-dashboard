@@ -68,21 +68,29 @@ O dashboard de vendas foi desenvolvido utilizando as linguagens HTML, CSS e Java
 
 ![](./img/funcao-calculate-comission.jpg)
 
-### Cálculo todas as comissões
-
-![](./img/funcao-calculate-all-comissions.jpg)
-
 ### Cálculo do Ticket Médio
 
 ![](./img/funcao-calculate-average-ticket.jpg)
+
+### Cálculo todas as comissões
+
+![](./img/funcao-calculate-all-comissions.jpg)
 
 ### Cálculo de todos os tickets médio
 
 ![](./img/funcao-calculate-all-average-tickets.jpg)
 
+### Cálculo do número total de vendas
+
+![]()
+
 ### Obter o conteúdo do gráfico de comissões
 
 ![](./img/funcao-get-comission-chart-content.jpg)
+
+### Obter o conteúdo do gráfico de receita
+
+![](./img/funcao-get-revenue-chart-content.jpg)
 
 ## Resultados
 
