@@ -72,13 +72,13 @@ O dashboard de vendas foi desenvolvido utilizando as linguagens HTML, CSS e Java
 
 ![](./img/funcao-calculate-all-comissions.jpg)
 
-### Cálculo de todos os tickets médio
-
-![](./img/funcao-calculate-all-average-tickets.jpg)
-
 ### Cálculo do Ticket Médio
 
 ![](./img/funcao-calculate-average-ticket.jpg)
+
+### Cálculo de todos os tickets médio
+
+![](./img/funcao-calculate-all-average-tickets.jpg)
 
 ## Resultados
 
