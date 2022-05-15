@@ -60,7 +60,13 @@ Uma tabela é composta somente pelos dados fornecidos e a outra, com os valores 
 
 ### Tecnologias
 
-O dashboard de vendas foi desenvolvido utilizando as linguagens HTML, CSS e Javascript, em conjunto com Bootstrap e Chart JS (para criar e apresentar os gráficos).
+O dashboard de vendas foi desenvolvido utilizando:
+
+- HTML
+- CSS
+- Javascript
+- Bootstrap
+- Chart JS (para criar e apresentar os gráficos).
 
 ## Descrevendo algumas das principais funções
 
