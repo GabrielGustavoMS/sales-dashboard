@@ -48,7 +48,7 @@ Forneceu-se as seguintes condições para se calcular o valor da comissão de ca
 1. Comissão de 3% para vendedores que atingirem vendas abaixo de R$ 20.000,00
 2. Comissão de 5% para vendedores que atingirem vendas superiores de R$ 20.000,01
 
-Como não foi explicito qual deveria ser o valor da comissão quando o total de vendas de um vendedor fosse exatamente igual a R$ 20.000,00 considerou-se a primeira condição, apesar do conjunto de dados não possuir um vendedor com comissão igual esse valor. Já o ticket médio foi calculado dividindo o valor total de vendas de cada vendedor pelo seu respectivo número de vendas (PAULILLO, 2021).
+Como não foi especificado qual deveria ser o valor da comissão quando o total de vendas de um vendedor fosse exatamente igual a R$ 20.000,00 considerou-se a primeira condição, apesar do conjunto de dados não possuir um vendedor com comissão igual esse valor. Já o ticket médio foi calculado dividindo o valor total de vendas de cada vendedor pelo seu respectivo número de vendas (PAULILLO, 2021).
 
 Considerou-se relevante apresentar a receita total, calculada somando o valor total de vendas de cada vendedor, o número total de vendas, calculado pela soma do número de venda de cada vendedor, o ticket médio da equipe, obtido dividindo a receita total pelo número total de vendas e por fim, a comissão total, resultante da soma das comissões individuais. Os dados foram armazenados em um arquivo local com nome **data** no formato JSON, pois atualmente é um dos formatos mais utilizados para trafegar dados na internet.
 
