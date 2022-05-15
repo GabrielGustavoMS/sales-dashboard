@@ -37,7 +37,7 @@ Já as métricas por sua vez, são a forma bruta desses indicadores e não costu
 
 ## Metodologias
 
-Seguiu-se as informações disponibilizadas em PDF pelo SENAI para desenvolver o Dashboard de vendas solicitado.
+Foram seguidas as informações disponibilizadas em PDF pelo SENAI para desenvolver o Dashboard de vendas solicitado.
 
 ### Conjunto de dados
 
