@@ -1,4 +1,4 @@
-## Introdução – O que é um Dashboard de Vendas
+## Introdução – O que é um Dashboard de Vendas?
 
 Na análise de dados, Dashboard é o termo usado para se referir a um painel de dados, de onde se pode obter informações relevantes para um determinado tipo de negócio, facilitando a análise de dados. Por isso, cada painel de dados costuma ser customizado de acordo com o cenário em que será utilizado.
 
