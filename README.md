@@ -1,16 +1,16 @@
 ## Introdução – O que é um Dashboard de Vendas
 
-Na análise de dados, Dashboard é o termo usado para se referir a um painel de dados, de onde se pode obter informações relevantes para um determinado tipo de negócio, facilitando a análise de dados. Por isso, cada painel de dados costuma ser customizados de acordo com o cenário em que será utilizado.
+Na análise de dados, Dashboard é o termo usado para se referir a um painel de dados, de onde se pode obter informações relevantes para um determinado tipo de negócio, facilitando a análise de dados. Por isso, cada painel de dados costuma ser customizado de acordo com o cenário em que será utilizado.
 
-As informações em Dashboards podem ser apresentadas de diversas formas, mas normalmente a grande maioria exibem as principais informações por meio de indicadores chave de desempenho (KPI), métricas e pontos de dados. Desse modo, de acordo com o tipo de negócio e usuário final, busca-se utilizar a forma de apresentação de dados mais adequada, como por exemplo números, textos e gráficos (Hayward, 2021).
+As informações em Dashboards podem ser apresentadas de diversas formas, mas normalmente a grande maioria exibem as principais informações por meio de indicadores chave de desempenho (KPI), métricas e pontos de dados. Desse modo, de acordo com o tipo de negócio e usuário final, busca-se utilizar a forma de apresentação de dados mais adequada, como por exemplo, números, textos e gráficos (Hayward, 2021).
 
-Dessa forma, um Dashboard de vendas é um painel de dados que exibirá indicadores, métricas e pontos de dados, com base em dados relacionados a vendas. Com isso, visto que os lucros de uma empresa normalmente se originam da venda de serviços ou produtos, um Dashboard de vendas, não somente para tomada de decisões referentes ao departamento de vendas, mas também outros, dependendo do tipo informação que se pode extrair.
+Dessa forma, um Dashboard de vendas é um painel de dados que exibirá indicadores, métricas e pontos de dados, com base em dados relacionados a vendas.É visto que os lucros de uma empresa normalmente se originam da venda de serviços ou produtos, um Dashboard de vendas pode ser utilizado não somente para tomada de decisões referentes ao departamento de vendas, mas também para outros propósitos dependendo do tipo informação que se quer extrair.
 
 ## Motivação
 
 A capacidade de tomar decisões rápidas e assertivas pode ser a diferença entre o crescimento de um negócio ou a sua falência, também em obter ou não vantagens competitivas. No entanto, isso se torna difícil para alguns profissionais quando a maioria dos dados estão espalhados em várias tabelas de dados diferentes.
 
-A extração de informações de várias fontes diferentes de forma manual torna-se um processo tedioso e muitas vezes ineficiente (The, 2017), principalmente em um cenário atual que as empresas buscam armazenar a maior quantidade de dados que puderem, já que esses são tão valiosos que ficaram conhecidos como o “novo petróleo”, expressão usada pelo matemático Clive Humby (Dados, 2021). Com isso, sem as ferramentas adequadas como dashboards, acaba sendo difícil ter “uma visão do todo” e consequentemente isso também impacta a geração de relatórios.
+A extração de informações de várias fontes diferentes de forma manual torna-se um processo tedioso e muitas vezes ineficiente (The, 2017), principalmente em um cenário atual que as empresas buscam armazenar a maior quantidade de dados que puderem, já que esses são tão valiosos que ficaram conhecidos como o “novo petróleo”, expressão usada pelo matemático Clive Humby (Dados, 2021). Com isso, sem as ferramentas adequadas como dashboards, acaba sendo difícil fazer a geração de relatórios e, consequentemente, ter "uma visão do todo".
 
 ### A importância de um Dashboard de vendas
 
@@ -23,7 +23,7 @@ Para a maioria das empresas, é necessário responder rapidamente a questões co
 - Qual foi o produto mais vendido?
 
 De fato, há uma série de questionamentos além desses que podem ser respondidos com a visualização e análise de um dashboard de vendas. Com base nessas respostas, pode-se identificar por exemplo se um produto está tendo um retorno esperado, pode-se verificar o desempenho dos vendedores e até mesmo obter informações sobre as suas comissões.
-Tais informações não são apenas relevantes para motivar e “movimentar a equipe” de vendas (Muller, 2021), mas também para decidir sobre qual rumo a empresa deve tomar. É importante levar em consideração, que os dashboards buscam reunir as principais informações, apenas as mais importantes.
+Tais informações não são apenas relevantes para motivar e “movimentar a equipe” de vendas (Muller, 2021), mas também para decidir sobre qual rumo a empresa deve tomar. É importante levar em consideração, que os dashboards buscam reunir as principais informações, ou seja, apenas as mais importantes.
 
 ## Objetivo
 
@@ -33,7 +33,7 @@ Apresentar e exemplificar um estudo de caso de um dashboard de vendas.
 
 Indicadores chave de performance ou KPI’s são ferramentas normalmente utilizadas para avaliar o desempenho de uma empresa e de seus funcionários em relação a uma meta. Em negócios, KPI’s de baixo nível são voltados para departamentos enquanto os de alto nível, para medir o desempenho de forma geral (What, 2022).
 
-Já as métricas por sua vez, são a forma bruta desses indicadores e não costumam estar associadas a metas (Silva, 2021). Já os pontos de dados ou observação é o conjunto resultante de uma ou mais medições em um único membro de uma população estatística (What, 2022).
+Já as métricas são a forma bruta desses indicadores e não costumam estar associadas a metas (Silva, 2021). Por outro lado, os pontos de dados ou observação é o conjunto resultante de uma ou mais medições em um único membro de uma população estatística (What, 2022).
 
 ## Metodologias
 
@@ -41,20 +41,20 @@ Foram seguidas as informações disponibilizadas em PDF pelo SENAI para desenvol
 
 ### Conjunto de dados
 
-Utilizou-se um conjunto de dados fornecido pelo SENAI (Serviço Nacional de Aprendizagem Industrial) contendo 6 amostras com informações relacionadas a vendas, contendo os seguintes atributos vendedor (nome do vendedor), número de vendas (número de vendas de cada vendedor), valor total (valor total de vendas de cada vendedor). Solicitou-se que os atributos comissão e ticket médio fossem calculados, com base no valor total e no número de vendas.
+Utilizou-se um conjunto de dados fornecido pelo SENAI (Serviço Nacional de Aprendizagem Industrial) contendo 6 amostras com informações relacionadas a vendas, contendo os seguintes atributos vendedor (nome do vendedor), número de vendas (número de vendas de cada vendedor), valor total (valor total de vendas de cada vendedor). Foi solicitado que os atributos comissão e ticket médio fossem calculados, com base no valor total e no número de vendas.
 
-Forneceu-se as seguintes condições para se calcular o valor da comissão de cada vendedor:
+Foram fornecidas as seguintes condições para se calcular o valor da comissão de cada vendedor:
 
 1. Comissão de 3% para vendedores que atingirem vendas abaixo de R$ 20.000,00
 2. Comissão de 5% para vendedores que atingirem vendas superiores de R$ 20.000,01
 
-Como não foi especificado qual deveria ser o valor da comissão quando o total de vendas de um vendedor fosse exatamente igual a R$ 20.000,00 considerou-se a primeira condição, apesar do conjunto de dados não possuir um vendedor com comissão igual esse valor. Já o ticket médio foi calculado dividindo o valor total de vendas de cada vendedor pelo seu respectivo número de vendas (PAULILLO, 2021).
+Como não foi especificado qual deveria ser o valor da comissão quando o total de vendas de um vendedor fosse exatamente igual a R$ 20.000,00, considerou-se a primeira condição, apesar do conjunto de dados não possuir um vendedor com comissão igual esse valor. Já o ticket médio foi calculado dividindo o valor total de vendas de cada vendedor pelo seu respectivo número de vendas (PAULILLO, 2021).
 
 Considerou-se relevante apresentar a receita total, calculada somando o valor total de vendas de cada vendedor, o número total de vendas, calculado pela soma do número de venda de cada vendedor, o ticket médio da equipe, obtido dividindo a receita total pelo número total de vendas e por fim, a comissão total, resultante da soma das comissões individuais. Os dados foram armazenados em um arquivo local com nome **data** no formato JSON, pois atualmente é um dos formatos mais utilizados para trafegar dados na internet.
 
 ### Apresentação de dados
 
-Os dados foram apresentados de duas formas, utilizando tabelas e gráficos. Utilizou-se gráficos de colunas, pois são uma alternativa recomendada para comparar valores independentes, uma vez que os leitores possuem uma facilidade maior para comparar o comprimento das barras, se comparado com a área de gráficos de pizza por exemplo (Nediger, 2021).
+Os dados foram apresentados de duas formas, utilizando tabelas e gráficos. Utilizou-se gráficos de colunas, pois são uma alternativa recomendada para comparar valores independentes, uma vez que os leitores possuem uma facilidade maior para comparar o comprimento das barras, se comparado com a área de gráficos de pizza, por exemplo (Nediger, 2021).
 
 Uma tabela é composta somente pelos dados fornecidos e a outra, com os valores dos atributos comissão e ticket médio preenchidos. Já os gráficos são individuais para cada atributo e apresentam no eixo X os nomes dos vendedores e no Y os valores respectivos dos atributos numéricos de cada vendedor.
 
@@ -115,7 +115,7 @@ O dashboard de vendas foi desenvolvido utilizando:
 Essa função receberá como parâmetros:
 
 - um array com os nomes dos vendedores, eixo X.
-- um array com valores de um dos 4 atributos (comissão, ticket médio, valor total de vendas e o numero de vendas)
+- um array com valores de um dos 4 atributos (comissão, ticket médio, valor total de vendas e o número de vendas)
 
 _Ela é a principal conexão com a livraria de gráficos_
 
