@@ -62,6 +62,7 @@ Uma tabela é composta somente pelos dados fornecidos e a outra, com os valores 
 
 O dashboard de vendas foi desenvolvido utilizando:
 
+- Vs Code
 - HTML
 - CSS
 - Javascript
