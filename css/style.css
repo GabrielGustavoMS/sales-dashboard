@@ -1,13 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: rgb(26, 26, 26);
   color: white;
 }
-a {
-  font-size: 2rem;
+
+main > section.space-top {
+  padding-top: 70px;
 }
-a:hover {
-  text-decoration: none;
+
+/*Navbar*/
+
+nav {
+  background-color: #0c0c0c;
+  padding: 0;
 }
+
+nav li {
+  transition: 0.35s all ease;
+}
+nav li {
+  padding: 0px 0;
+  margin-right: 0.5em;
+}
+
+nav img.logo {
+  background-color: #ffffff;
+}
+
+.navbar-brand {
+  padding: 0.9em 0;
+}
+
+/* Content */
+
+main {
+  margin-top: 250px;
+}
+
 @media (max-width: 750px) {
   .p-5 {
     padding: 2% !important;
@@ -15,4 +47,10 @@ a:hover {
 }
 canvas:first-child {
   min-height: 500px;
+}
+
+@media (max-width: 910px) {
+  nav li {
+    padding: 0;
+  }
 }

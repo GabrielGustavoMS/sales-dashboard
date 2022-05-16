@@ -23,148 +23,197 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <section class="container">
-      <section class="row">
-        <article class="col-md-12">
-          <section class="p-3 bg-dark rounded mt-5">
-            <h2 href="" class="text-light">
-              <i class="fa-solid fa-table-cells"></i>
-              Tabelas
-            </h2>
-          </section>
-        </article>
-      </section>
-    </section>
-
-    <section class="container mt-3 mb-5">
-      <article class="table-responsive" id="missing-table-content"></article>
-    </section>
-
-    <section class="container mt-3">
-      <article class="table-responsive" id="full-table-content"></article>
-    </section>
-
-    <section class="container">
-      <section class="row">
-        <article class="col-md-12">
-          <section class="p-3 bg-dark rounded mt-5">
-            <h2 class="text-light">
-              <i class="fa-solid fa-sack-dollar"></i>
-              Receita
-            </h2>
-          </section>
-        </article>
-      </section>
-    </section>
-    <section class="container mb-5">
-      <section class="row">
-        <article class="col-lg-9">
-          <article class="p-5 bg-dark rounded mt-3">
-            <canvas id="myChart"></canvas>
+    <header>
+      <!-- Menu -->
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <a class="navbar-brand" href="#page-top" id="projetoTop"
+          ><img
+            class="logo"
+            width="200"
+            src="img/senailogovermelho.png"
+            alt="logotipo Senai"
+        /></a>
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link text-ligth" href="#tables-sec">Tabelas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-ligth" href="#revenue-sec">Receita</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-ligth" href="#amount-of-sales-sec"
+                >Quantitade de Vendas</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-ligth" href="#comission-sec">Comissão</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-ligth" href="#ticket-sec">Ticket Médio</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main id="page-top">
+      <section class="container mt-5 space-top" id="tables-sec">
+        <h1 class="text-center pt-5">Dashboard de Vendas</h1>
+        <section class="row">
+          <article class="col-md-12">
+            <section class="p-3 bg-dark rounded mt-5">
+              <h2 href="" class="text-light">
+                <i class="fa-solid fa-table-cells"></i>
+                Tabelas
+              </h2>
+            </section>
           </article>
-        </article>
-        <article class="col-lg-3">
-          <section class="p-5 bg-dark text-center rounded mt-3">
-            <h5 class="mb-5">
-              Receita Total &nbsp; <i class="fa-solid fa-coins"></i>
-            </h5>
-            <h5 id="totalRevenue"></h5>
-          </section>
-        </article>
+        </section>
       </section>
-    </section>
 
-    <section class="container mt-3">
-      <section class="row">
-        <article class="col-md-12">
-          <section class="p-3 bg-dark rounded mt-5">
-            <h2 class="text-light">
-              <i class="fa-solid fa-chart-simple"></i>
-              Quantitade de Vendas
-            </h2>
-          </section>
-        </article>
+      <section class="container mt-3 mb-5">
+        <article class="table-responsive" id="missing-table-content"></article>
       </section>
-    </section>
 
-    <section class="container mb-5">
-      <section class="row">
-        <article class="col-lg-9">
-          <article class="p-3 bg-dark rounded mt-3">
-            <canvas id="myChart2"></canvas>
+      <section class="container mt-3">
+        <article class="table-responsive" id="full-table-content"></article>
+      </section>
+
+      <section class="container space-top" id="revenue-sec">
+        <section class="row">
+          <article class="col-md-12">
+            <section class="p-3 bg-dark rounded mt-5">
+              <h2 class="text-light">
+                <i class="fa-solid fa-sack-dollar"></i>
+                Receita
+              </h2>
+            </section>
           </article>
-        </article>
-        <article class="col-lg-3">
-          <section class="p-5 bg-dark text-center rounded mt-3">
-            <h5 class="mb-5">
-              Total &nbsp; <i class="fa-solid fa-chart-column"></i>
-            </h5>
-            <h5 id="totalAmountOfSales"></h5>
-          </section>
-        </article>
+        </section>
       </section>
-    </section>
-
-    <section class="container">
-      <section class="row">
-        <article class="col-md-12">
-          <section class="p-3 bg-dark rounded mt-5">
-            <h2 class="text-light">
-              <i class="fa-solid fa-hand-holding-dollar"></i>
-              Comissão
-            </h2>
-          </section>
-        </article>
-      </section>
-    </section>
-
-    <section class="container mb-5">
-      <section class="row">
-        <article class="col-lg-9">
-          <article class="p-5 bg-dark rounded mt-3">
-            <canvas id="myChart3"></canvas>
+      <section class="container mb-2">
+        <section class="row">
+          <article class="col-lg-9">
+            <article class="p-5 bg-dark rounded mt-3">
+              <canvas id="myChart"></canvas>
+            </article>
           </article>
-        </article>
-        <article class="col-lg-3">
-          <section class="p-5 bg-dark text-center rounded mt-3">
-            <h5 class="mb-5">
-              Comissão Total &nbsp; <i class="fa-solid fa-coins"></i>
-            </h5>
-            <h5 id="totalCommisionValue"></h5>
-          </section>
-        </article>
-      </section>
-    </section>
-
-    <section class="container">
-      <section class="row">
-        <article class="col-md-12">
-          <section class="p-3 bg-dark rounded mt-5">
-            <h2 class="text-light">
-              <i class="fa-solid fa-ticket-simple"></i>
-              Ticket Médio
-            </h2>
-          </section>
-        </article>
-      </section>
-    </section>
-    <section class="container mb-5">
-      <section class="row">
-        <article class="col-lg-9">
-          <article class="p-5 bg-dark rounded mt-3">
-            <canvas id="myChart4"></canvas>
+          <article class="col-lg-3">
+            <section class="p-5 bg-dark text-center rounded mt-3">
+              <h5 class="mb-5">
+                Receita Total &nbsp; <i class="fa-solid fa-coins"></i>
+              </h5>
+              <h5 id="totalRevenue"></h5>
+            </section>
           </article>
-        </article>
-        <article class="col-lg-3">
-          <section class="p-5 bg-dark text-center rounded mt-3">
-            <h5 class="mb-5">
-              Ticket Médio da Equipe &nbsp; <i class="fa-solid fa-coins"></i>
-            </h5>
-            <h5 id="teamAverageTicket"></h5>
-          </section>
-        </article>
+        </section>
       </section>
-    </section>
+
+      <section class="container mt-3 space-top" id="amount-of-sales-sec">
+        <section class="row">
+          <article class="col-md-12">
+            <section class="p-3 bg-dark rounded mt-5">
+              <h2 class="text-light">
+                <i class="fa-solid fa-chart-simple"></i>
+                Quantitade de Vendas
+              </h2>
+            </section>
+          </article>
+        </section>
+      </section>
+
+      <section class="container mb-2">
+        <section class="row">
+          <article class="col-lg-9">
+            <article class="p-3 bg-dark rounded mt-3">
+              <canvas id="myChart2"></canvas>
+            </article>
+          </article>
+          <article class="col-lg-3">
+            <section class="p-5 bg-dark text-center rounded mt-3">
+              <h5 class="mb-5">
+                Total &nbsp; <i class="fa-solid fa-chart-column"></i>
+              </h5>
+              <h5 id="totalAmountOfSales"></h5>
+            </section>
+          </article>
+        </section>
+      </section>
+
+      <section class="container space-top" id="comission-sec">
+        <section class="row">
+          <article class="col-md-12">
+            <section class="p-3 bg-dark rounded mt-5">
+              <h2 class="text-light">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                Comissão
+              </h2>
+            </section>
+          </article>
+        </section>
+      </section>
+
+      <section class="container mb-2">
+        <section class="row">
+          <article class="col-lg-9">
+            <article class="p-5 bg-dark rounded mt-3">
+              <canvas id="myChart3"></canvas>
+            </article>
+          </article>
+          <article class="col-lg-3">
+            <section class="p-5 bg-dark text-center rounded mt-3">
+              <h5 class="mb-5">
+                Comissão Total &nbsp; <i class="fa-solid fa-coins"></i>
+              </h5>
+              <h5 id="totalCommisionValue"></h5>
+            </section>
+          </article>
+        </section>
+      </section>
+
+      <section class="container space-top" id="ticket-sec">
+        <section class="row">
+          <article class="col-md-12">
+            <section class="p-3 bg-dark rounded mt-5">
+              <h2 class="text-light">
+                <i class="fa-solid fa-ticket-simple"></i>
+                Ticket Médio
+              </h2>
+            </section>
+          </article>
+        </section>
+      </section>
+      <section class="container mb-2">
+        <section class="row">
+          <article class="col-lg-9">
+            <article class="p-5 bg-dark rounded mt-3">
+              <canvas id="myChart4"></canvas>
+            </article>
+          </article>
+          <article class="col-lg-3">
+            <section class="p-5 bg-dark text-center rounded mt-3">
+              <h5 class="mb-5">
+                Ticket Médio da Equipe &nbsp; <i class="fa-solid fa-coins"></i>
+              </h5>
+              <h5 id="teamAverageTicket"></h5>
+            </section>
+          </article>
+        </section>
+      </section>
+    </main>
+    <footer></footer>
+
     <!-- Bootstrap -->
     <script src="./assets/bs4/jquery.min.js"></script>
     <script src="./assets/bs4/popper.min.js"></script>
@@ -173,6 +222,7 @@
     <script src="./js/charts.js"></script>
     <script src="./js/myChartsConfig.js"></script>
     <!-- Custom scripts -->
+    <script src="./js/navbar.js"></script>
     <script src="./js/main.js"></script>
     <script>
       getTables()
