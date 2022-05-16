@@ -126,7 +126,7 @@ _Ela é a principal conexão com a livraria de gráficos_
 ## Resultados
 
 Obteve-se como resultado um Dashboard de vendas que consome e apresenta os dados fornecidos e os solicitados, de forma gráfica.
-
+[Aplicação disponível no Github Pages](https://gabrielgustavoms.github.io/sales-dashboard/)
 ## Referências
 
 - Hayward, E. [What is a data dashboard?](https://www.klipfolio.com/blog/what-is-a-data-dashboard)Acesso em: 14 de maio 2022.
