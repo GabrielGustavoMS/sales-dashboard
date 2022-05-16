@@ -8,6 +8,11 @@ body {
   scroll-behavior: smooth;
 }
 
+h1 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Colors */
 :root {
   --bg-dark-1: rgb(26, 26, 26);
   --bg-dark2: #0c0c0c;
