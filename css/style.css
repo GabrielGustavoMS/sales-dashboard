@@ -1,9 +1,20 @@
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
 }
+html,
 body {
-  background-color: rgb(26, 26, 26);
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-dark-1: rgb(26, 26, 26);
+  --bg-dark2: #0c0c0c;
+}
+
+body {
+  background-color: var(--bg-dark-1);
   color: white;
 }
 
@@ -14,7 +25,7 @@ main > section.space-top {
 /*Navbar*/
 
 nav {
-  background-color: #0c0c0c;
+  background-color: var(--bg-dark2);
   padding: 0;
 }
 
@@ -38,6 +49,25 @@ nav img.logo {
 
 main {
   margin-top: 250px;
+}
+
+body > footer {
+  padding: 3% 0;
+  margin-top: 150px;
+  background-color: var(--bg-dark2);
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+body > footer article > a {
+  color: white;
+  font-size: 2.35rem;
+  transition: all ease 0.4s;
+}
+
+body > footer article > a:hover {
+  color: rgb(219, 219, 219);
+  font-size: 2.75rem;
 }
 
 @media (max-width: 750px) {
