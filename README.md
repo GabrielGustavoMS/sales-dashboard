@@ -2,7 +2,7 @@
 
 Na análise de dados, Dashboard é o termo usado para se referir a um painel de dados, de onde se pode obter informações relevantes para um determinado tipo de negócio, facilitando a análise de dados. Por isso, cada painel de dados costuma ser customizado de acordo com o cenário em que será utilizado.
 
-As informações em Dashboards podem ser apresentadas de diversas formas, mas normalmente a grande maioria exibem as principais informações por meio de indicadores chave de desempenho (KPI), métricas e pontos de dados. Desse modo, de acordo com o tipo de negócio e usuário final, busca-se utilizar a forma de apresentação de dados mais adequada, como por exemplo, números, textos e gráficos (Hayward, 2021).
+As informações em Dashboards podem ser apresentadas de diversas formas, mas normalmente a grande maioria exibe as principais informações por meio de indicadores chave de desempenho (KPI), métricas e pontos de dados. Desse modo, de acordo com o tipo de negócio e usuário final, busca-se utilizar a forma de apresentação de dados mais adequada, como por exemplo, números, textos e gráficos (Hayward, 2021).
 
 Dessa forma, um Dashboard de vendas é um painel de dados que exibirá indicadores, métricas e pontos de dados, com base em dados relacionados a vendas.É visto que os lucros de uma empresa normalmente se originam da venda de serviços ou produtos, um Dashboard de vendas pode ser utilizado não somente para tomada de decisões referentes ao departamento de vendas, mas também para outros propósitos dependendo do tipo informação que se quer extrair.
 
